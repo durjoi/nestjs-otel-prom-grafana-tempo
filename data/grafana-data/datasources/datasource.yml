@@ -8,6 +8,7 @@ deleteDatasources:
 datasources:
 - name: Prometheus
   type: prometheus
+  uid: prometheus
   access: proxy
   orgId: 1
   url: http://prometheus:9090
@@ -31,6 +32,8 @@ datasources:
     httpMethod: GET
     serviceMap:
       datasourceUid: prometheus
+    streamingEnabled:
+      search: true
 
 - name: Loki
   type: loki
